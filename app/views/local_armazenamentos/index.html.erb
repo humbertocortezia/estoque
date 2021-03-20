@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Local Armazenamentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @local_armazenamentos.each do |local_armazenamento| %>
+      <tr>
+        <td><%= local_armazenamento.nome %></td>
+        <td><%= link_to 'Show', local_armazenamento %></td>
+        <td><%= link_to 'Edit', edit_local_armazenamento_path(local_armazenamento) %></td>
+        <td><%= link_to 'Destroy', local_armazenamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Local Armazenamento', new_local_armazenamento_path %>
